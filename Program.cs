@@ -1,8 +1,12 @@
+using DependencyInjection_Demo_API.Interfaces;
+using DependencyInjection_Demo_API.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddTransient<ICalculatorService<decimal>, CalculatorService>(); //registred Icalculator Service interface
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
