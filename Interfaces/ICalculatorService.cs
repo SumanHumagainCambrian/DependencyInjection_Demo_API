@@ -1,10 +1,10 @@
 ﻿namespace DependencyInjection_Demo_API.Interfaces
 {
-    public interface ICalculatorService
+    public interface ICalculatorService<T>
     {
-        decimal Add(decimal num1, decimal num2);
-        decimal Subtract(decimal num1, decimal num2);
-        decimal Multiply(decimal num1, decimal num2);
-        decimal Divide(decimal num1, decimal num2);
+        T Add(T num1, T num2);
+        T Subtract(T num1, T num2);
+        T Multiply(T num1, T num2);
+        T Divide(T num1, T num2);
     }
 }
